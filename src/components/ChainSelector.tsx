@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import Image from 'next/image'
-import { useWallet } from '@/context/WalletContext'
+import { useWallet } from '@/context/PrivyWalletContext'
 import { ChevronDownIcon } from '@heroicons/react/24/outline'
 
 export interface ChainInfo {
@@ -16,108 +16,18 @@ export interface ChainInfo {
 
 export const supportedChains: ChainInfo[] = [
   {
-    id: 52014,
-    hexId: '0xCB2E',
-    name: 'Electroneum Mainnet',
-    icon: '/chains/electroneum.png',
-    symbol: 'ETN',
-    rpcUrl: 'https://rpc.ankr.com/electroneum',
-    blockExplorerUrl: 'https://blockexplorer.electroneum.com/'
-  },
-  {
-    id: 5201420,
-    hexId: '0x4F5E0C',
-    name: 'Electroneum Testnet',
-    icon: '/chains/electroneum.png',
-    symbol: 'ETN',
-    rpcUrl: 'https://rpc.ankr.com/electroneum_testnet',
-    blockExplorerUrl: 'https://blockexplorer.thesecurityteam.rocks/'
-  },
-  {
-    id: 656476,
-    hexId: '0xA045C',
-    name: 'EduChain Testnet',
-    icon: '/chains/educhain.png',
-    symbol: 'EDU',
-    rpcUrl: 'https://open-campus-codex-sepolia.drpc.org/',
-    blockExplorerUrl: 'https://opencampus-codex.blockscout.com/'
-  },
-  {
-    id: 28122024,
-    hexId: '0x1AD1BA8',
-    name: 'Ancient8 Testnet',
-    icon: '/chains/ancient8.png',
-    symbol: 'ETH',
-    rpcUrl: 'https://rpcv2-testnet.ancient8.gg/',
-    blockExplorerUrl: 'https://ancient8.testnet.routescan.io/',
-  },
-  {
-    id: 12227332,
-    hexId: '0xBA9304',
-    name: 'NeoX Testnet',
-    icon: '/chains/neox.png',
-    symbol: 'GAS',
-    rpcUrl: 'https://neoxt4seed1.ngd.network/',
-    blockExplorerUrl: 'https://xt4scan.ngd.network/'
-  },
-  {
-    id: 5003,
-    hexId: '0x138B',
-    name: 'Mantle Sepolia Testnet',
-    icon: '/chains/mantle.png',
-    symbol: 'MNT',
-    rpcUrl: 'https://rpc.sepolia.mantle.xyz',
-    blockExplorerUrl: 'https://explorer.sepolia.mantle.xyz'
-  },
-  {
-    id: 1001,
-    hexId: '0x3E9',
-    name: 'KAIA Testnet',
-    icon: '/chains/kaia.png',
-    symbol: 'KAIA',
-    rpcUrl: 'https://kaia-kairos.blockpi.network/v1/rpc/public',
-    blockExplorerUrl: 'https://kairos.kaiascope.com/',
-  },
-  {
-    id: 41,
-    hexId: '0x29',
-    name: 'Telos Testnet',
-    icon: '/chains/telos.png',
-    symbol: 'TLOS',
-    rpcUrl: 'https://testnet.telos.net/evm',
-    blockExplorerUrl: 'https://testnet.teloscan.io/',
-  },
-  {
-    id: 59141,
-    hexId: '0xE705',
-    name: 'Linea Sepolia',
-    icon: '/chains/linea.png',
-    symbol: 'LineaETH',
-    rpcUrl: 'https://linea-sepolia.infura.io',
-    blockExplorerUrl: 'https://sepolia.lineascan.build'
-  },
-  {
-    id: 66665,
-    hexId: '0x10469',
-    name: 'Creator Chain Testnet',
-    icon: '/chains/creator.png',
-    symbol: 'CETH',
-    rpcUrl: 'https://66665.rpc.thirdweb.com',
-    blockExplorerUrl: 'https://explorer.creatorchain.io'
-  },
-  {
-    id: 4157,
-    hexId: '0x103D',
-    name: 'CrossFi Testnet',
-    icon: '/chains/crossfi.png',
-    symbol: 'XFI',
-    rpcUrl: 'https://rpc.testnet.ms',
-    blockExplorerUrl: 'https://test.xfiscan.com'
+    id: 10143,
+    hexId: '0x279F',
+    name: 'Monad Testnet',
+    icon: '/chains/monad.png',
+    symbol: 'MON',
+    rpcUrl: 'https://testnet-rpc.monad.xyz',
+    blockExplorerUrl: 'https://monad-testnet.socialscan.io'
   },
 ] as const
 
 const ChainSelector = () => {
-  const { isConnected } = useWallet()
+  const { isConnected, switchChain } = useWallet()
   const [currentChainId, setCurrentChainId] = useState<number | null>(null)
   const [isSwitching, setIsSwitching] = useState(false)
   const [isDropdownOpen, setIsDropdownOpen] = useState(false)
@@ -150,72 +60,23 @@ const ChainSelector = () => {
   }, [])
 
   const handleSwitchNetwork = async (chainData: typeof supportedChains[number]) => {
-    if (!window.ethereum || !isConnected || isSwitching) return
+    if (!isConnected || isSwitching) return
 
     setIsSwitching(true)
     try {
-      await window.ethereum.request({
-        method: 'wallet_switchEthereumChain',
-        params: [{ chainId: chainData.hexId }],
-      })
+      await switchChain(chainData.id)
+      setCurrentChainId(chainData.id)
       setIsDropdownOpen(false)
-    } catch (switchError: unknown) {
-      if ((switchError as { code: number }).code === 4902) {
-        try {
-          await window.ethereum.request({
-            method: 'wallet_addEthereumChain',
-            params: [
-              {
-                chainId: chainData.hexId,
-                chainName: chainData.name,
-                nativeCurrency: {
-                  name: chainData.symbol,
-                  symbol: chainData.symbol,
-                  decimals: 18
-                },
-                rpcUrls: [chainData.rpcUrl],
-                blockExplorerUrls: [chainData.blockExplorerUrl]
-              }
-            ]
-          })
-          setIsDropdownOpen(false)
-        } catch (addError) {
-          console.error('Error adding chain:', addError)
-        }
-      }
+    } catch (error) {
+      console.error('Error switching chain:', error)
     } finally {
       setIsSwitching(false)
     }
   }
 
   useEffect(() => {
-    const getChainId = async () => {
-      if (window.ethereum && isConnected) {
-        try {
-          const chainId = await window.ethereum.request({ method: 'eth_chainId' })
-          setCurrentChainId(parseInt(chainId, 16))
-        } catch (error) {
-          console.error('Error getting chain ID:', error)
-        }
-      }
-    }
-
-    getChainId()
-
-    const handleChainChanged = (chainId: string) => {
-      setCurrentChainId(parseInt(chainId, 16))
-      window.location.reload()
-    }
-
-    if (window.ethereum) {
-      window.ethereum.on('chainChanged', handleChainChanged)
-    }
-
-    return () => {
-      if (window.ethereum) {
-        window.ethereum.removeListener('chainChanged', handleChainChanged)
-      }
-    }
+    // Default to first supported chain
+    setCurrentChainId(supportedChains[0].id)
   }, [isConnected])
 
   if (!isConnected) return null

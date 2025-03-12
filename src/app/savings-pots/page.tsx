@@ -14,7 +14,7 @@ import {
   ArrowUpIcon,
   FireIcon
 } from '@heroicons/react/24/outline'
-import { useWallet } from '@/context/WalletContext'
+import { useWallet } from '@/context/PrivyWalletContext'
 import { 
   createSavingsPot,
   contributeToSavingsPot,

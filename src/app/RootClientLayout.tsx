@@ -2,7 +2,7 @@
 
 'use client'
 
-import { WalletProvider } from '@/context/WalletContext';
+import { PrivyWalletProvider } from '@/context/PrivyWalletContext';
 import { useEffect, useState } from 'react';
 
 export default function RootClientLayout({ children }: { children: React.ReactNode }) {
@@ -17,7 +17,7 @@ export default function RootClientLayout({ children }: { children: React.ReactNo
   }
 
   return (
-    <WalletProvider>
+    <PrivyWalletProvider>
       {/* Background Elements */}
       <div className="fixed inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-gray-900 via-black to-green-950" />
       <div className="fixed inset-0 bg-[url('/grid.svg')] bg-center [mask-image:linear-gradient(180deg,white,rgba(255,255,255,0))] pointer-events-none opacity-20" />
@@ -29,6 +29,6 @@ export default function RootClientLayout({ children }: { children: React.ReactNo
       </div>
 
       {children}
-    </WalletProvider>
+    </PrivyWalletProvider>
   );
 }

@@ -10,7 +10,7 @@ import {
   XMarkIcon, QrCodeIcon, PlusCircleIcon, ArrowRightIcon,
   ArrowDownIcon, ArrowLeftIcon, ShieldCheckIcon
 } from '@heroicons/react/24/outline';
-import { useWallet } from '@/context/WalletContext';
+import { useWallet } from '@/context/PrivyWalletContext';
 import { 
   getUserProfile, registerUsername, getUserByAddress,
   getTransferDetails, getGroupPaymentDetails, getSavingsPotDetails 

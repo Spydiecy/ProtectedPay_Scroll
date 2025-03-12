@@ -14,8 +14,7 @@ import {
   BanknotesIcon,
   UserCircleIcon
 } from '@heroicons/react/24/outline'
-import { useAccount, useDisconnect, useChainId } from 'wagmi'
-import { useConnectModal } from '@rainbow-me/rainbowkit'
+import { useWallet } from '@/context/PrivyWalletContext'
 import ChainSelector from './ChainSelector'
 
 const navItems = [
@@ -28,31 +27,14 @@ const navItems = [
 const Navbar: React.FC = () => {
   const pathname = usePathname()
   const router = useRouter()
-  const { address } = useAccount()
-  const chainId = useChainId()
-  const { openConnectModal } = useConnectModal()
-  const { disconnect } = useDisconnect()
+  const { address, isConnected, login, logout } = useWallet()
   const [isMenuOpen, setIsMenuOpen] = useState(false)
-  const [prevChainId, setPrevChainId] = useState<number>()
-
-  useEffect(() => {
-    if (chainId && prevChainId && chainId !== prevChainId) {
-      // Refresh the current page when chain changes
-      router.refresh()
-      
-      // Optional: Add a small delay before refreshing to ensure contract states are updated
-      setTimeout(() => {
-        window.location.reload()
-      }, 500)
-    }
-    setPrevChainId(chainId)
-  }, [chainId, prevChainId, router])
 
   const handleWalletClick = () => {
-    if (address) {
-      disconnect()
+    if (isConnected) {
+      logout()
     } else {
-      openConnectModal?.()
+      login()
     }
   }
 
