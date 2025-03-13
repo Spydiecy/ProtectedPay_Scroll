@@ -1,8 +1,27 @@
-# ProtectedPay  
+# ProtectedPay on Monad
 
-ProtectedPay is a multi-chain DeFi platform designed to provide secure transfers, group payments, and smart savings features across multiple blockchains. Prioritizing advanced security and an intuitive user experience, it empowers users to manage and protect their crypto assets effectively.  
+ProtectedPay is a DeFi platform designed to provide secure transfers, group payments, and smart savings features on the Monad blockchain. Prioritizing advanced security and an intuitive user experience, it empowers users to manage and protect their MON tokens effectively.  
 
 ![image](https://github.com/user-attachments/assets/ddcdbaa4-aee1-4f6f-b711-e1125d72f239)
+
+---
+
+## Powered by Monad Testnet
+
+ProtectedPay runs on the Monad Testnet blockchain:  
+
+<p align="left">
+    <img align="left" src="/public/chains/monad.png" width="80" height="80" style="margin-right: 10px;"></img>
+</p>
+
+<br clear="left"/>
+
+Monad is a high-performance Layer 1 blockchain with parallel transaction execution and instant finality, offering:
+- Lightning-fast transaction speeds
+- Low transaction fees
+- High security
+- EVM compatibility
+- Parallel transaction processing
 
 ---
 
@@ -28,8 +47,8 @@ ProtectedPay supports the following blockchains:
 
 ## Key Features  
 
-### 1. Protected Cross-Chain Transfers  
-- Secure asset transfers across multiple blockchains.  
+### 1. Protected MON Token Transfers  
+- Secure MON token transfers on the Monad Testnet.  
 - Smart contract protection ensures funds are held securely until claimed.  
 - Transfers can be initiated using usernames or wallet addresses.  
 - Customizable remarks for tracking and easy refunds for unclaimed transfers.  
@@ -38,14 +57,14 @@ ProtectedPay supports the following blockchains:
 
 
 ### 2. Group Payments  
-- Multi-chain payment pools with automatic expense splitting.  
+- MON token payment pools with automatic expense splitting.  
 - Real-time tracking of contributions and instant distribution upon completion.  
-- Support for cross-chain participants.  
+- Benefit from Monad's high transaction throughput for efficient payments.  
 - ![image](https://github.com/user-attachments/assets/56141ff7-ad4b-4a1e-bfac-5abdd92b22a9)
 
 
 ### 3. Savings Pots  
-- Set chain-specific savings goals with progress tracking.  
+- Set MON savings goals with progress tracking.  
 - Flexible contributions and emergency withdrawal options.  
 - Track purpose-specific savings effortlessly.  
 - ![image](https://github.com/user-attachments/assets/96d0db31-cec3-432c-90b2-8707ce870e2c)
@@ -57,24 +76,24 @@ ProtectedPay supports the following blockchains:
 
 ### Core Functionalities
 ![image](https://github.com/user-attachments/assets/a3f64a6a-5504-4a0c-988e-a76364ea4879)
-- Cross-chain username system for seamless transfers.  
-- Unified multi-chain transaction history and activity dashboard.  
-- Real-time, network-specific balance tracking.  
-- Chain-aware progress visualizations for user insights.  
+- Username system for seamless MON transfers.  
+- Unified transaction history and activity dashboard.  
+- Real-time MON token balance tracking.  
+- Progress visualizations for user insights.  
 
 ### QR Code System  
 ![image](https://github.com/user-attachments/assets/bc4e425b-d6f7-49b8-a4fe-8831ba9e5548)
 ![image](https://github.com/user-attachments/assets/f645759e-47bf-4fb1-9e87-b46f7c0bc6a7)
 - Generate unique profile QR codes containing payment details.  
 - In-app QR code scanning via camera or image uploads.  
-- Auto-fill transfer details for quick and secure payments.  
+- Auto-fill transfer details for quick and secure MON payments.  
 
 ---
 
 ## Telegram Integration  
 ![image](https://github.com/user-attachments/assets/9ea2c83d-271c-4c5f-ba2f-0b436d69d9a0)
 - Access ProtectedPay services via **@protectedpay_bot**.  
-- Send and receive assets across chains effortlessly.  
+- Send and receive MON tokens effortlessly.  
 - Track transactions, manage funds, and receive instant notifications.  
 
 ---
@@ -82,18 +101,18 @@ ProtectedPay supports the following blockchains:
 ## How It Works  
 
 ### 1. Protected Transfers  
-- Select the blockchain and connect your wallet.  
-- Send assets using a username, wallet address, or QR code scan.  
+- Connect your wallet to Monad Testnet.  
+- Send MON tokens using a username, wallet address, or QR code scan.  
 - Funds are claimed securely, with refunds available for unclaimed transfers.  
 
 ### 2. Group Payments  
-- Create a multi-chain payment pool with participants and target amounts.  
-- Accept cross-chain contributions and distribute funds automatically.  
+- Create a payment pool with participants and target amounts in MON.  
+- Accept contributions and distribute funds automatically.  
 
 ### 3. Savings Pots  
-- Choose a blockchain, set a savings target, and track progress.
-- Can choose to earn yield on your savings pot too, increasing the tvl of the chain aswell.
-- Withdraw funds flexibly as needed.  
+- Set a MON savings target and track progress.
+- Gain interest on your savings pot while building value on Monad.
+- Withdraw funds flexibly as needed.
 
 ---
 

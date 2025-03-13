@@ -126,7 +126,7 @@ const Hero = () => {
           className="text-xl sm:text-2xl md:text-3xl lg:text-4xl mb-8 md:mb-12 text-gray-300 max-w-3xl mx-auto font-light px-4"
           variants={fadeIn}
         >
-          Smart, Secure Crypto Transfers With Built-in Escrow Protection
+          Smart, Secure MON Transfers With Built-in Escrow Protection
         </motion.p>
 
         <motion.div 
@@ -139,7 +139,7 @@ const Hero = () => {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
-              <span className="relative z-10">Transfer Now</span>
+              <span className="relative z-10">Transfer MON Now</span>
               <ArrowRightIcon className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               <div className="absolute inset-0 rounded-xl md:rounded-2xl bg-green-400 blur-md group-hover:opacity-70 transition-opacity opacity-0" />
             </motion.a>
@@ -151,9 +151,9 @@ const Hero = () => {
           variants={fadeIn}
         >
           {[
-            { icon: ShieldCheckIcon, text: "Funds Protected Until Claimed" },
-            { icon: QrCodeIcon, text: "QR Scan & Pay" },
-            { icon: ScissorsIcon, text: "Split Bills Easily" }
+            { icon: ShieldCheckIcon, text: "MON Tokens Protected Until Claimed" },
+            { icon: QrCodeIcon, text: "QR Scan & Pay with MON" },
+            { icon: ScissorsIcon, text: "Split Bills Easily on Monad" }
           ].map((item, i) => (
             <motion.div 
               key={i}
@@ -175,16 +175,8 @@ const Hero = () => {
 
 const ChainSlider = () => {
   const chains = [
-    { name: 'Electroneum', icon: '/chains/electroneum.png' },
-    { name: 'NeoX', icon: '/chains/neox.png' },
-    { name: 'EduChain', icon: '/chains/educhain.png' },
-    { name: 'Ancient8', icon: '/chains/ancient8.png' },
-    { name: 'Mantle', icon: '/chains/mantle.png' },
-    { name: 'Kaia', icon: '/chains/kaia.png' },
-    { name: 'Telos', icon: '/chains/telos.png' },
-    { name: 'Linea', icon: '/chains/linea.png' },
-    { name: 'Creator', icon: '/chains/creator.png' },
-    { name: 'CrossFi', icon: '/chains/crossfi.png' },
+    { name: 'Monad Testnet', icon: '/chains/monad.png' },
+    // removing other chains since we're focusing only on Monad now
   ];
 
   return (
@@ -198,7 +190,7 @@ const ChainSlider = () => {
           viewport={{ once: true }}
         >
           <span className="bg-gradient-to-r from-green-400 to-emerald-500 text-transparent bg-clip-text">
-            Multi-Chain Support
+            Powered by Monad
           </span>
         </motion.h2>
         
@@ -209,174 +201,25 @@ const ChainSlider = () => {
           whileInView="animate"
           viewport={{ once: true }}
         >
-          Send and receive funds seamlessly across multiple blockchain networks, all with the same secure interface
+          Experience the speed and security of Monad's high-performance blockchain with instant finality
         </motion.p>
       </div>
 
-      <div className="slider-container">
-        <div className="slider">
-          {/* First copy of logos */}
-          {chains.map((chain, index) => (
-            <div key={`chain-1-${index}`} className="slide">
-              <div className="logo-wrapper group">
-                <Image
-                  src={chain.icon}
-                  alt={chain.name}
-                  width={80}
-                  height={80}
-                  className="logo-image transition-all duration-300 filter grayscale group-hover:grayscale-0 group-hover:scale-110"
-                />
-                <div className="logo-name opacity-70 group-hover:opacity-100 group-hover:text-green-400">
-                  {chain.name}
-                </div>
-              </div>
-            </div>
-          ))}
-          
-          {/* Second copy of logos (needed for seamless animation) */}
-          {chains.map((chain, index) => (
-            <div key={`chain-2-${index}`} className="slide">
-              <div className="logo-wrapper group">
-                <Image
-                  src={chain.icon}
-                  alt={chain.name}
-                  width={80}
-                  height={80}
-                  className="logo-image transition-all duration-300 filter grayscale group-hover:grayscale-0 group-hover:scale-110"
-                />
-                <div className="logo-name opacity-70 group-hover:opacity-100 group-hover:text-green-400">
-                  {chain.name}
-                </div>
-              </div>
-            </div>
-          ))}
-          
-          {/* Third copy of logos (for extra buffer) */}
-          {chains.map((chain, index) => (
-            <div key={`chain-3-${index}`} className="slide">
-              <div className="logo-wrapper group">
-                <Image
-                  src={chain.icon}
-                  alt={chain.name}
-                  width={80}
-                  height={80}
-                  className="logo-image transition-all duration-300 filter grayscale group-hover:grayscale-0 group-hover:scale-110"
-                />
-                <div className="logo-name opacity-70 group-hover:opacity-100 group-hover:text-green-400">
-                  {chain.name}
-                </div>
-              </div>
-            </div>
-          ))}
-          
-          {/* Fourth copy of logos (for extra buffer) */}
-          {chains.map((chain, index) => (
-            <div key={`chain-4-${index}`} className="slide">
-              <div className="logo-wrapper group">
-                <Image
-                  src={chain.icon}
-                  alt={chain.name}
-                  width={80}
-                  height={80}
-                  className="logo-image transition-all duration-300 filter grayscale group-hover:grayscale-0 group-hover:scale-110"
-                />
-                <div className="logo-name opacity-70 group-hover:opacity-100 group-hover:text-green-400">
-                  {chain.name}
-                </div>
-              </div>
-            </div>
-          ))}
+      <div className="flex justify-center items-center py-10">
+        <div className="bg-black/40 backdrop-blur-xl p-8 rounded-2xl border border-green-500/20 hover:border-green-500/40 transition-all duration-500 text-center">
+          <Image
+            src="/chains/monad.png"
+            alt="Monad Testnet"
+            width={120}
+            height={120}
+            className="mx-auto mb-4"
+          />
+          <h3 className="text-2xl font-semibold text-green-400 mb-2">Monad Testnet</h3>
+          <p className="text-gray-400 max-w-md">
+            The high-performance Layer 1 blockchain with parallel transaction execution
+          </p>
         </div>
       </div>
-      
-      <style jsx>{`
-        .slider-container {
-          position: relative;
-          overflow: hidden;
-          padding: 20px 0;
-          width: 100%;
-        }
-        
-        .slider-container::before,
-        .slider-container::after {
-          content: '';
-          position: absolute;
-          top: 0;
-          width: 200px;
-          height: 100%;
-          z-index: 2;
-          pointer-events: none;
-        }
-        
-        .slider-container::before {
-          left: 0;
-          background: linear-gradient(to right, rgba(0,0,0,1), rgba(0,0,0,0));
-        }
-        
-        .slider-container::after {
-          right: 0;
-          background: linear-gradient(to left, rgba(0,0,0,1), rgba(0,0,0,0));
-        }
-        
-        .slider {
-          display: flex;
-          animation: scroll 40s linear infinite;
-          width: fit-content;
-        }
-        
-        .slider-container:hover .slider {
-          animation-play-state: paused;
-        }
-        
-        .slide {
-          flex: 0 0 auto;
-          width: 140px;
-          box-sizing: border-box;
-          padding: 0 10px;
-        }
-        
-        .logo-wrapper {
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          justify-content: center;
-          padding: 10px;
-          border-radius: 12px;
-          background: rgba(0, 0, 0, 0.3);
-          border: 1px solid rgba(128, 128, 128, 0.2);
-          transition: all 0.3s ease;
-          cursor: pointer;
-          height: 120px;
-        }
-        
-        .logo-wrapper:hover {
-          border-color: rgba(74, 222, 128, 0.4);
-          transform: translateY(-5px);
-        }
-        
-        .logo-image {
-          width: 60px;
-          height: 60px;
-          object-fit: contain;
-        }
-        
-        .logo-name {
-          margin-top: 8px;
-          font-size: 14px;
-          text-align: center;
-          color: #6b7280;
-          transition: all 0.3s ease;
-        }
-        
-        @keyframes scroll {
-          0% {
-            transform: translateX(0);
-          }
-          100% {
-            transform: translateX(calc(-140px * ${chains.length} * 2));
-          }
-        }
-      `}</style>
     </section>
   );
 };
@@ -497,7 +340,7 @@ const TransferHighlight = () => {
                       <div className="bg-black/50 p-4 rounded-lg border border-green-500/20">
                         <div className="text-gray-400 text-sm mb-2">Amount</div>
                         <div className="flex items-center justify-between">
-                          <div className="text-green-400">0.5 GAS</div>
+                          <div className="text-green-400">0.5 MON</div>
                           <CurrencyDollarIcon className="w-5 h-5 text-green-400" />
                         </div>
                       </div>
@@ -545,12 +388,12 @@ const AdditionalFeatures = () => {
         >
           <h2 className="text-3xl md:text-5xl font-bold mb-6">
             <span className="bg-gradient-to-r from-green-400 to-emerald-500 text-transparent bg-clip-text">
-              More Than Just Transfers
+              Built for Monad's Performance
             </span>
           </h2>
           
           <p className="text-gray-300 text-lg max-w-3xl mx-auto">
-            ProtectedPay offers a complete suite of financial tools designed for the crypto ecosystem
+            ProtectedPay is optimized for Monad's high-throughput blockchain, enabling faster and more efficient financial tools
           </p>
         </motion.div>
         
@@ -572,7 +415,7 @@ const AdditionalFeatures = () => {
             <h3 className="text-2xl font-semibold text-green-400 mb-4">Split Payments</h3>
             
             <p className="text-gray-400 mb-6">
-              Easily split bills, share expenses, and collect funds from multiple people. Perfect for group dinners, trips, or shared purchases.
+              Easily split bills, share expenses, and collect funds from multiple people. Pay in MON with Monad's fast transaction speeds.
             </p>
             
             <ul className="space-y-3">
@@ -580,7 +423,7 @@ const AdditionalFeatures = () => {
                 "Create payment pools with multiple contributors",
                 "Automatic distribution when target is reached",
                 "Track who has paid and who hasn't",
-                "Works across all supported blockchains"
+                "Lightning-fast transaction finality on Monad"
               ].map((item, i) => (
                 <li key={i} className="flex items-start space-x-2">
                   <CheckCircleIcon className="w-5 h-5 text-green-400 flex-shrink-0 mt-0.5" />
@@ -607,15 +450,15 @@ const AdditionalFeatures = () => {
             <h3 className="text-2xl font-semibold text-green-400 mb-4">Savings Pots</h3>
             
             <p className="text-gray-400 mb-6">
-              Create dedicated savings goals with locked funds until your target is reached. A smart way to save for future purchases or projects.
+              Create dedicated MON savings goals with locked funds until your target is reached. A smart way to save for future purchases or projects.
             </p>
             
             <ul className="space-y-3">
               {[
-                "Set personal savings goals with target amounts",
+                "Set personal savings goals with target amounts in MON",
                 "Track progress with real-time updates",
                 "Break the pot when needed or when goal is reached",
-                "Perfect for vacation funds, emergency savings, and more"
+                "Low-fee transactions thanks to Monad's efficiency"
               ].map((item, i) => (
                 <li key={i} className="flex items-start space-x-2">
                   <CheckCircleIcon className="w-5 h-5 text-green-400 flex-shrink-0 mt-0.5" />
@@ -676,7 +519,7 @@ const CallToAction = () => {
             variants={fadeIn}
           >
             <span className="bg-gradient-to-r from-green-400 to-emerald-500 text-transparent bg-clip-text">
-              Start Using ProtectedPay Today
+              Start Using ProtectedPay on Monad Today
             </span>
           </motion.h2>
 
@@ -684,7 +527,7 @@ const CallToAction = () => {
             className="text-xl mb-8 text-gray-300 max-w-2xl mx-auto"
             variants={fadeIn}
           >
-            Experience the safest way to send and receive crypto across multiple blockchains
+            Experience the safest way to send and receive MON tokens on the lightning-fast Monad blockchain
           </motion.p>
 
           <motion.div
@@ -697,7 +540,7 @@ const CallToAction = () => {
                 whileTap={{ scale: 0.95 }}
               >
                 <ShieldCheckIcon className="w-6 h-6" />
-                <span>Transfer Now</span>
+                <span>Transfer MON Now</span>
                 <ArrowRightIcon className="w-5 h-5" />
               </motion.a>
             </Link>

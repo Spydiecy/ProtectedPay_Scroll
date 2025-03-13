@@ -1528,10 +1528,16 @@ interface TransferEvent {
   
   export const getChainNativeCurrency = (chainId: number) => {
 	switch (chainId) {
+	  case 10143: // Monad Testnet
+		return {
+		  name: 'MON',
+		  symbol: 'MON',
+		  decimals: 18
+		};
 	  case 12227332:
 		return {
-		  name: 'GAS',
-		  symbol: 'GAS',
+		  name: 'MON',
+		  symbol: 'MON',
 		  decimals: 18
 		};
 	  case 656476:
@@ -1542,8 +1548,8 @@ interface TransferEvent {
 		};
 	  default:
 		return {
-		  name: 'GAS',
-		  symbol: 'GAS',
+		  name: 'MON',
+		  symbol: 'MON',
 		  decimals: 18
 		};
 	}
@@ -1596,7 +1602,7 @@ interface TransferEvent {
 		return 'Transaction was rejected by user';
 	  }
 	  if (error.message.includes('insufficient funds')) {
-		return `Insufficient ${getChainNativeCurrency(chainId || 12227332).symbol} for transaction`;
+		return `Insufficient ${getChainNativeCurrency(chainId || 10143).symbol} for transaction`;
 	  }
 	  return error.message;
 	}
