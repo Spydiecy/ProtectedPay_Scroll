@@ -186,14 +186,25 @@ export function PrivyWalletProvider({ children }: { children: ReactNode }) {
           {
             id: monadTestnet.id,
             name: monadTestnet.name,
-            rpcUrls: [monadTestnet.rpcUrls.default.http[0]],
-            token: monadTestnet.nativeCurrency.symbol,
-            blockExplorer: monadTestnet.blockExplorers.default.url
+            rpcUrls: {
+              default: {
+                http: [monadTestnet.rpcUrls.default.http[0]]
+              }
+            },
+            nativeCurrency: monadTestnet.nativeCurrency,
+            blockExplorers: monadTestnet.blockExplorers
           }
         ],
         defaultChain: {
           id: monadTestnet.id,
-          rpcUrl: monadTestnet.rpcUrls.default.http[0]
+          name: monadTestnet.name,
+          nativeCurrency: monadTestnet.nativeCurrency,
+          rpcUrls: {
+            default: {
+              http: [monadTestnet.rpcUrls.default.http[0]]
+            }
+          },
+          blockExplorers: monadTestnet.blockExplorers
         }
       }}
     >
