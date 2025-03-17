@@ -2,7 +2,7 @@
 
 ProtectedPay is a DeFi platform designed to provide secure transfers, group payments, and smart savings features on the Scroll blockchain. Prioritizing advanced security and an intuitive user experience, it empowers users to manage and protect their ETH tokens effectively.  
 
-![image](https://github.com/user-attachments/assets/16ec2233-dff9-4802-aa27-a5e5cc8b3aac)
+![image](https://github.com/user-attachments/assets/acbaffb4-ed99-42d6-a2eb-4b2bf2cd324f)
 
 ---
 
@@ -33,28 +33,28 @@ Scroll is a high-performance Layer 2 blockchain with EVM compatibility, offering
 - Transfers can be initiated using usernames or wallet addresses.  
 - Customizable remarks for tracking and easy refunds for unclaimed transfers.  
 - QR code integration for scanning and payment processing.  
-- ![image](https://github.com/user-attachments/assets/362ab7ba-9275-44ac-8dbd-ed94e5768f2b)
+- ![image](https://github.com/user-attachments/assets/40951e3c-a283-4ddc-ab2a-1449abbdcd14)
 
 
 ### 2. Group Payments  
 - ETH token payment pools with automatic expense splitting.  
 - Real-time tracking of contributions and instant distribution upon completion.  
 - Benefit from Scroll's high transaction throughput for efficient payments.  
-- ![image](https://github.com/user-attachments/assets/be1c32bf-d41a-4eb1-99ba-33b05b42ba99)
+- ![image](https://github.com/user-attachments/assets/7e329320-8b48-4f17-889e-814bf6b31624)
 
 
 ### 3. Savings Pots  
 - Set ETH savings goals with progress tracking.  
 - Flexible contributions and emergency withdrawal options.  
 - Track purpose-specific savings effortlessly.  
-- ![image](https://github.com/user-attachments/assets/5cff7c7c-1e30-4f39-8021-fddc09aee263)
+- ![image](https://github.com/user-attachments/assets/83d479d1-3870-42cc-8327-7533254a9d3b)
 
 ---
 
 ## User Features  
 
 ### Core Functionalities
-![image](https://github.com/user-attachments/assets/a3f64a6a-5504-4a0c-988e-a76364ea4879)
+![image](https://github.com/user-attachments/assets/0a8a1bdc-1b52-4cd2-9b35-4d7594f04130)
 - Username system for seamless ETH transfers.  
 - Unified transaction history and activity dashboard.  
 - Real-time ETH token balance tracking.  
@@ -93,7 +93,7 @@ Scroll is a high-performance Layer 2 blockchain with EVM compatibility, offering
 - Glassmorphism effects with responsive layouts and chain-specific theming.  
 - Real-time chain updates with integrated QR code functionality.  
 
-![image](https://github.com/user-attachments/assets/e7b826fc-e2c5-4f34-bbbb-fa828fc19c98)
+![image](https://github.com/user-attachments/assets/098d67f7-85f3-4c43-8735-771a416d12ef)
 
 ---
 
