@@ -1,7 +1,7 @@
 import { ethers } from 'ethers';
 
 const CONTRACT_ADDRESSES = {
-	10143: '0xF93132d75c20EfeD556EC2Bc5aC777750665D3a9', // Monad Testnet
+	534351: '0x2c51D62d65b8ba191Db7aC3420F213D38c853aFd', // Scroll Sepolia
 } as const;
   
 const CONTRACT_ABI = [
@@ -1145,7 +1145,7 @@ interface TransferEvent {
   const getContractAddress = async (signer: ethers.Signer) => {
 	const chainId = await signer.getChainId();
 	return CONTRACT_ADDRESSES[chainId as keyof typeof CONTRACT_ADDRESSES] 
-	  || CONTRACT_ADDRESSES[10143]; // Default to Monad if chain not found
+	  || CONTRACT_ADDRESSES[534351]; // Default to Scroll if chain not found
   };
   
   // Contract instance getter with chain awareness
@@ -1528,10 +1528,10 @@ interface TransferEvent {
   
   export const getChainNativeCurrency = (chainId: number) => {
 	switch (chainId) {
-	  case 10143: // Monad Testnet
+	  case 534351: // Scroll Sepolia
 		return {
-		  name: 'MON',
-		  symbol: 'MON',
+		  name: 'ETH',
+		  symbol: 'ETH',
 		  decimals: 18
 		};
 	  case 12227332:
@@ -1548,8 +1548,8 @@ interface TransferEvent {
 		};
 	  default:
 		return {
-		  name: 'MON',
-		  symbol: 'MON',
+		  name: 'ETH',
+		  symbol: 'ETH',
 		  decimals: 18
 		};
 	}
@@ -1557,12 +1557,14 @@ interface TransferEvent {
   
   export const getExplorerUrl = (chainId: number) => {
 	switch (chainId) {
+	  case 534351:
+		return 'https://sepolia.scrollscan.com/';
 	  case 12227332:
 		return 'https://xt4scan.ngd.network/';
 	  case 656476:
 		return 'https://opencampus-codex.blockscout.com/';
 	  default:
-		return 'https://xt4scan.ngd.network/';
+		return 'https://sepolia.scrollscan.com/';
 	}
   };
   

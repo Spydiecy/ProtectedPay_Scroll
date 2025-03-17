@@ -5,28 +5,28 @@ import { PrivyProvider, usePrivy, useWallets } from '@privy-io/react-auth';
 import { ethers } from 'ethers';
 
 // Define chain
-const monadTestnet = {
-  id: 10143,
-  hexId: '0x279F',
-  name: 'Monad Testnet',
-  network: 'monadtestnet',
+const scrollTestnet = {
+  id: 534351,
+  hexId: '0x82853',
+  name: 'Scroll Sepolia',
+  network: 'scroll-sepolia',
   nativeCurrency: {
     decimals: 18,
-    name: 'MON',
-    symbol: 'MON',
+    name: 'ETH',
+    symbol: 'ETH',
   },
   rpcUrls: {
     default: {
-      http: ['https://testnet-rpc.monad.xyz']
+      http: ['https://sepolia-rpc.scroll.io']
     },
     public: {
-      http: ['https://testnet-rpc.monad.xyz']
+      http: ['https://sepolia-rpc.scroll.io']
     }
   },
   blockExplorers: {
     default: {
-      name: 'Monad Testnet Explorer',
-      url: 'https://monad-testnet.socialscan.io'
+      name: 'Scroll Sepolia Explorer',
+      url: 'https://sepolia.scrollscan.com'
     }
   },
   testnet: true,
@@ -184,27 +184,27 @@ export function PrivyWalletProvider({ children }: { children: ReactNode }) {
         },
         supportedChains: [
           {
-            id: monadTestnet.id,
-            name: monadTestnet.name,
+            id: scrollTestnet.id,
+            name: scrollTestnet.name,
             rpcUrls: {
               default: {
-                http: [monadTestnet.rpcUrls.default.http[0]]
+                http: [scrollTestnet.rpcUrls.default.http[0]]
               }
             },
-            nativeCurrency: monadTestnet.nativeCurrency,
-            blockExplorers: monadTestnet.blockExplorers
+            nativeCurrency: scrollTestnet.nativeCurrency,
+            blockExplorers: scrollTestnet.blockExplorers
           }
         ],
         defaultChain: {
-          id: monadTestnet.id,
-          name: monadTestnet.name,
-          nativeCurrency: monadTestnet.nativeCurrency,
+          id: scrollTestnet.id,
+          name: scrollTestnet.name,
+          nativeCurrency: scrollTestnet.nativeCurrency,
           rpcUrls: {
             default: {
-              http: [monadTestnet.rpcUrls.default.http[0]]
+              http: [scrollTestnet.rpcUrls.default.http[0]]
             }
           },
-          blockExplorers: monadTestnet.blockExplorers
+          blockExplorers: scrollTestnet.blockExplorers
         }
       }}
     >

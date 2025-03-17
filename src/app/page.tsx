@@ -126,7 +126,7 @@ const Hero = () => {
           className="text-xl sm:text-2xl md:text-3xl lg:text-4xl mb-8 md:mb-12 text-gray-300 max-w-3xl mx-auto font-light px-4"
           variants={fadeIn}
         >
-          Smart, Secure MON Transfers With Built-in Escrow Protection
+          Smart, Secure ETH Transfers With Built-in Escrow Protection
         </motion.p>
 
         <motion.div 
@@ -139,7 +139,7 @@ const Hero = () => {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
-              <span className="relative z-10">Transfer MON Now</span>
+              <span className="relative z-10">Transfer ETH Now</span>
               <ArrowRightIcon className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               <div className="absolute inset-0 rounded-xl md:rounded-2xl bg-green-400 blur-md group-hover:opacity-70 transition-opacity opacity-0" />
             </motion.a>
@@ -151,9 +151,9 @@ const Hero = () => {
           variants={fadeIn}
         >
           {[
-            { icon: ShieldCheckIcon, text: "MON Tokens Protected Until Claimed" },
-            { icon: QrCodeIcon, text: "QR Scan & Pay with MON" },
-            { icon: ScissorsIcon, text: "Split Bills Easily on Monad" }
+            { icon: ShieldCheckIcon, text: "ETH Tokens Protected Until Claimed" },
+            { icon: QrCodeIcon, text: "QR Scan & Pay with ETH" },
+            { icon: ScissorsIcon, text: "Split Bills Easily on Scroll" }
           ].map((item, i) => (
             <motion.div 
               key={i}
@@ -175,8 +175,8 @@ const Hero = () => {
 
 const ChainSlider = () => {
   const chains = [
-    { name: 'Monad Testnet', icon: '/chains/monad.png' },
-    // removing other chains since we're focusing only on Monad now
+    { name: 'Scroll Sepolia', icon: '/chains/scroll.png' },
+    // removing other chains since we're focusing only on Scroll now
   ];
 
   return (
@@ -190,7 +190,7 @@ const ChainSlider = () => {
           viewport={{ once: true }}
         >
           <span className="bg-gradient-to-r from-green-400 to-emerald-500 text-transparent bg-clip-text">
-            Powered by Monad
+            Powered by Scroll
           </span>
         </motion.h2>
         
@@ -201,23 +201,23 @@ const ChainSlider = () => {
           whileInView="animate"
           viewport={{ once: true }}
         >
-          Experience the speed and security of Monad's high-performance blockchain with instant finality
+          Experience the speed and security of Scroll's high-performance blockchain with instant finality
         </motion.p>
       </div>
 
       <div className="flex justify-center items-center py-10">
         <div className="bg-black/40 backdrop-blur-xl p-8 rounded-2xl border border-green-500/20 hover:border-green-500/40 transition-all duration-500 text-center">
           <Image
-            src="/chains/monad.png"
-            alt="Monad Testnet"
-            width={120}
-            height={120}
-            className="mx-auto mb-4"
+            src="/chains/scroll.png"
+            alt="Scroll Sepolia"
+            width={80}
+            height={80}
+            className="rounded-full border-4 border-green-500/20"
           />
-          <h3 className="text-2xl font-semibold text-green-400 mb-2">Monad Testnet</h3>
-          <p className="text-gray-400 max-w-md">
-            The high-performance Layer 1 blockchain with parallel transaction execution
-          </p>
+          <div className="mt-4 text-center">
+            <h3 className="text-2xl font-semibold text-green-400 mb-2">Scroll Sepolia</h3>
+            <p className="text-gray-300">Layer 2 scaling solution for Ethereum</p>
+          </div>
         </div>
       </div>
     </section>
@@ -340,7 +340,7 @@ const TransferHighlight = () => {
                       <div className="bg-black/50 p-4 rounded-lg border border-green-500/20">
                         <div className="text-gray-400 text-sm mb-2">Amount</div>
                         <div className="flex items-center justify-between">
-                          <div className="text-green-400">0.5 MON</div>
+                          <div className="text-green-400">0.5 ETH</div>
                           <CurrencyDollarIcon className="w-5 h-5 text-green-400" />
                         </div>
                       </div>
@@ -388,12 +388,12 @@ const AdditionalFeatures = () => {
         >
           <h2 className="text-3xl md:text-5xl font-bold mb-6">
             <span className="bg-gradient-to-r from-green-400 to-emerald-500 text-transparent bg-clip-text">
-              Built for Monad's Performance
+              Built for Scroll's Performance
             </span>
           </h2>
           
           <p className="text-gray-300 text-lg max-w-3xl mx-auto">
-            ProtectedPay is optimized for Monad's high-throughput blockchain, enabling faster and more efficient financial tools
+            ProtectedPay is optimized for Scroll's high-throughput blockchain, enabling faster and more efficient financial tools
           </p>
         </motion.div>
         
@@ -414,8 +414,8 @@ const AdditionalFeatures = () => {
             
             <h3 className="text-2xl font-semibold text-green-400 mb-4">Split Payments</h3>
             
-            <p className="text-gray-400 mb-6">
-              Easily split bills, share expenses, and collect funds from multiple people. Pay in MON with Monad's fast transaction speeds.
+            <p className="text-gray-300 mb-6">
+              Easily split bills, share expenses, and collect funds from multiple people. Pay in ETH with Scroll's fast transaction speeds.
             </p>
             
             <ul className="space-y-3">
@@ -423,7 +423,7 @@ const AdditionalFeatures = () => {
                 "Create payment pools with multiple contributors",
                 "Automatic distribution when target is reached",
                 "Track who has paid and who hasn't",
-                "Lightning-fast transaction finality on Monad"
+                "Lightning-fast transaction finality on Scroll"
               ].map((item, i) => (
                 <li key={i} className="flex items-start space-x-2">
                   <CheckCircleIcon className="w-5 h-5 text-green-400 flex-shrink-0 mt-0.5" />
@@ -449,16 +449,16 @@ const AdditionalFeatures = () => {
             
             <h3 className="text-2xl font-semibold text-green-400 mb-4">Savings Pots</h3>
             
-            <p className="text-gray-400 mb-6">
-              Create dedicated MON savings goals with locked funds until your target is reached. A smart way to save for future purchases or projects.
+            <p className="text-gray-300 mb-6">
+              Create dedicated ETH savings goals with locked funds until your target is reached. A smart way to save for future purchases or projects.
             </p>
             
             <ul className="space-y-3">
               {[
-                "Set personal savings goals with target amounts in MON",
+                "Set personal savings goals with target amounts in ETH",
                 "Track progress with real-time updates",
                 "Break the pot when needed or when goal is reached",
-                "Low-fee transactions thanks to Monad's efficiency"
+                "Low-fee transactions thanks to Scroll's efficiency"
               ].map((item, i) => (
                 <li key={i} className="flex items-start space-x-2">
                   <CheckCircleIcon className="w-5 h-5 text-green-400 flex-shrink-0 mt-0.5" />
@@ -519,7 +519,7 @@ const CallToAction = () => {
             variants={fadeIn}
           >
             <span className="bg-gradient-to-r from-green-400 to-emerald-500 text-transparent bg-clip-text">
-              Start Using ProtectedPay on Monad Today
+              Start Using ProtectedPay on Scroll Today
             </span>
           </motion.h2>
 
@@ -527,7 +527,7 @@ const CallToAction = () => {
             className="text-xl mb-8 text-gray-300 max-w-2xl mx-auto"
             variants={fadeIn}
           >
-            Experience the safest way to send and receive MON tokens on the lightning-fast Monad blockchain
+            Experience the safest way to send and receive ETH tokens on the lightning-fast Scroll blockchain
           </motion.p>
 
           <motion.div
@@ -540,7 +540,7 @@ const CallToAction = () => {
                 whileTap={{ scale: 0.95 }}
               >
                 <ShieldCheckIcon className="w-6 h-6" />
-                <span>Transfer MON Now</span>
+                <span>Transfer ETH Now</span>
                 <ArrowRightIcon className="w-5 h-5" />
               </motion.a>
             </Link>

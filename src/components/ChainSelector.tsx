@@ -16,13 +16,13 @@ export interface ChainInfo {
 
 export const supportedChains: ChainInfo[] = [
   {
-    id: 10143,
-    hexId: '0x279F',
-    name: 'Monad Testnet',
-    icon: '/chains/monad.png',
-    symbol: 'MON',
-    rpcUrl: 'https://testnet-rpc.monad.xyz',
-    blockExplorerUrl: 'https://monad-testnet.socialscan.io'
+    id: 534351,
+    hexId: '0x82853',
+    name: 'Scroll Sepolia',
+    icon: '/chains/scroll.png',
+    symbol: 'ETH',
+    rpcUrl: 'https://sepolia-rpc.scroll.io',
+    blockExplorerUrl: 'https://sepolia.scrollscan.com'
   },
 ] as const
 

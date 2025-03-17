@@ -1,34 +1,34 @@
-# ProtectedPay on Monad
+# ProtectedPay on Scroll Chain
 
-ProtectedPay is a DeFi platform designed to provide secure transfers, group payments, and smart savings features on the Monad blockchain. Prioritizing advanced security and an intuitive user experience, it empowers users to manage and protect their MON tokens effectively.  
+ProtectedPay is a DeFi platform designed to provide secure transfers, group payments, and smart savings features on the Scroll blockchain. Prioritizing advanced security and an intuitive user experience, it empowers users to manage and protect their ETH tokens effectively.  
 
 ![image](https://github.com/user-attachments/assets/16ec2233-dff9-4802-aa27-a5e5cc8b3aac)
 
 ---
 
-## Powered by Monad Testnet
+## Powered by Scroll Sepolia
 
-ProtectedPay runs on the Monad Testnet blockchain:  
+ProtectedPay runs on the Scroll Sepolia testnet blockchain:  
 
 <p align="left">
-    <img align="left" src="/public/chains/monad.png" width="80" height="80" style="margin-right: 10px;"></img>
+    <img align="left" src="/public/chains/scroll.png" width="80" height="80" style="margin-right: 10px;"></img>
 </p>
 
 <br clear="left"/>
 
-Monad is a high-performance Layer 1 blockchain with parallel transaction execution and instant finality, offering:
+Scroll is a high-performance Layer 2 blockchain with EVM compatibility, offering:
 - Lightning-fast transaction speeds
 - Low transaction fees
 - High security
 - EVM compatibility
-- Parallel transaction processing
+- Ethereum-based scaling solution
 
 ---
 
 ## Key Features  
 
-### 1. Protected MON Token Transfers  
-- Secure MON token transfers on the Monad Testnet.  
+### 1. Protected ETH Token Transfers  
+- Secure ETH token transfers on the Scroll Sepolia.  
 - Smart contract protection ensures funds are held securely until claimed.  
 - Transfers can be initiated using usernames or wallet addresses.  
 - Customizable remarks for tracking and easy refunds for unclaimed transfers.  
@@ -37,14 +37,14 @@ Monad is a high-performance Layer 1 blockchain with parallel transaction executi
 
 
 ### 2. Group Payments  
-- MON token payment pools with automatic expense splitting.  
+- ETH token payment pools with automatic expense splitting.  
 - Real-time tracking of contributions and instant distribution upon completion.  
-- Benefit from Monad's high transaction throughput for efficient payments.  
+- Benefit from Scroll's high transaction throughput for efficient payments.  
 - ![image](https://github.com/user-attachments/assets/be1c32bf-d41a-4eb1-99ba-33b05b42ba99)
 
 
 ### 3. Savings Pots  
-- Set MON savings goals with progress tracking.  
+- Set ETH savings goals with progress tracking.  
 - Flexible contributions and emergency withdrawal options.  
 - Track purpose-specific savings effortlessly.  
 - ![image](https://github.com/user-attachments/assets/5cff7c7c-1e30-4f39-8021-fddc09aee263)
@@ -55,9 +55,9 @@ Monad is a high-performance Layer 1 blockchain with parallel transaction executi
 
 ### Core Functionalities
 ![image](https://github.com/user-attachments/assets/a3f64a6a-5504-4a0c-988e-a76364ea4879)
-- Username system for seamless MON transfers.  
+- Username system for seamless ETH transfers.  
 - Unified transaction history and activity dashboard.  
-- Real-time MON token balance tracking.  
+- Real-time ETH token balance tracking.  
 - Progress visualizations for user insights.  
 
 ### QR Code System  
@@ -65,24 +65,24 @@ Monad is a high-performance Layer 1 blockchain with parallel transaction executi
 ![image](https://github.com/user-attachments/assets/f645759e-47bf-4fb1-9e87-b46f7c0bc6a7)
 - Generate unique profile QR codes containing payment details.  
 - In-app QR code scanning via camera or image uploads.  
-- Auto-fill transfer details for quick and secure MON payments.  
+- Auto-fill transfer details for quick and secure ETH payments.  
 
 ---
 
 ## How It Works  
 
 ### 1. Protected Transfers  
-- Connect your wallet to Monad Testnet.  
-- Send MON tokens using a username, wallet address, or QR code scan.  
+- Connect your wallet to Scroll Sepolia.  
+- Send ETH tokens using a username, wallet address, or QR code scan.  
 - Funds are claimed securely, with refunds available for unclaimed transfers.  
 
 ### 2. Group Payments  
-- Create a payment pool with participants and target amounts in MON.  
+- Create a payment pool with participants and target amounts in ETH.  
 - Accept contributions and distribute funds automatically.  
 
 ### 3. Savings Pots  
-- Set a MON savings target and track progress.
-- Gain interest on your savings pot while building value on Monad.
+- Set an ETH savings target and track progress.
+- Gain interest on your savings pot while building value on Scroll.
 - Withdraw funds flexibly as needed.
 
 ---
@@ -99,7 +99,7 @@ Monad is a high-performance Layer 1 blockchain with parallel transaction executi
 
 ## Deployed Contracts  
 
-Monad Testnet -  `0xF93132d75c20EfeD556EC2Bc5aC777750665D3a9`
+Scroll Sepolia -  `0x2c51D62d65b8ba191Db7aC3420F213D38c853aFd`
 
 ---
 
@@ -116,4 +116,4 @@ For queries or issues, reach out at:
 
 ---
 
-**ProtectedPay** - Revolutionizing secure asset management! 🚀  
+**ProtectedPay** - Revolutionizing secure asset management! 🚀
